@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+    <meta charset="utf-8">    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title> Secret Santa Generator </title>
+    
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/buttons.js"></script>
+    
+    
+</head>
+
+<body> 
+   <div class="container">
+        <div class="row">
+          <!-- Side Navbar --> 
+            <div id="mySidenav" class="sidenav">
+              <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+              <a href="about.html">Home</a>
+              <a href="setup.html">Host/Join</a>
+              <a href="active.html">Active Groups</a>
+              <a href="index.html">Log out</a>
+            </div>  
+        
+            <!-- Side Navbar Button -->
+            <span style="font-size:30px;cursor:pointer" onclick="openNav()" class="btnMenu btn">&#9776;</span>
+            
+            <!-- Chat Button --> 
+            <button type="chat" class="btnChat btn btn-default btn-md">
+              <span class="glyphicon glyphicon-comment" aria-hidden="true"></span> Chat
+            </button>
+
+        
+            <div class="page-title">
+                <h1> Secret Santa </h1>
+            </div>
+        
+        </div> <!-- / Row --> 
+    </div> <!-- / Container --> 
+   
+     <div class="container-fluid"> 
+        <h2> HOST </h2>
+         <p> Please set the options for your Secret Santa Group </p>
+         <!-- INSERT OPTIONS --> 
+
+    <!-- Budget Range -->  
+    <p> Budget </p>
+    <form class="form-inline">
+        <div class="form-group">
+            <label class="sr-only" for="exampleInputAmount">Budget</label>
+        <div class="input-group formBudget">
+          <div class="input-group-addon">£</div>
+            <input type="text" class="form-control" id="exampleInputAmount" placeholder="Budget">
+          <div class="input-group-addon">.00</div>
+        </div>
+      </div>
+    </form>   
+    <br>
+         
+    <!-- Set no. of participants -->  
+    <p> No. of Participants </p>
+    <div class="short center">
+      <select class="form-control short">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+      </select>
+    </div>
+    <br>
+        
+    <!-- Set Deadline -->  
+    <p> Gift Exchange Date </p>
+    <div class="short ">
+      <input type="text" class="form-control" placeholder="Deadline">
+    </div>
+    <br>
+         
+    </div> <!-- / Container -->
+    
+    <div class="container-fluid "> 
+     <a href="#" class="btn btn-danger btn-lg" role="button"> Generate Pin </a>
+    </div>
+        
+</body> 
+</html>
