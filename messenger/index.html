@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Secret Santa Messenger</title>
+	<script src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<style>
+	      form.form-inline { background: #d75452; padding-top: 7px; padding-bottom: 7px; position: fixed; bottom: 0; width: 100%; }
+	      /*form button { background: rgb(130, 224, 255); border: none; padding: 10px; }*/
+	      #form_id, #m { width:100%; }
+	      #messages { list-style-type: none; margin-left: 20%; margin-right: 20%; margin-top: 5%; padding: 0; }
+	      #messages li { padding: 5px 10px; }
+	      #messages li:nth-child(odd) { background: #eee; }
+	      .btn-messege { width:100%; }
+	</style>
+
+</head>
+<body>
+	<ul id="messages"></ul>
+
+	<form class="form-inline">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="row">
+						<div class="col-md-10 col-xs-8">
+							<div  id="form_id" class="form-group">
+								<input id="m" type="text" autocomplete="off" class="form-control" placeholder="message here">
+							</div>			
+						</div>
+						<div class="col-md-2 col-xs-4">
+							<button id="form_id_btn" class="btn btn-default btn-messege">Send</button>	
+						</div>
+					</div>	
+						
+				</div>
+			</div>
+		</div>
+		
+	</form>
+
+</body>
+
+<script>
+	var socket = io();
+	
+	// submit message as chat message from #m
+	$('#form_id_btn').on("click", ()=>{
+		socket.emit('chat message', $('#m').val());
+		$('#m').val('');
+		return false;
+	});
+
+
+	socket.on('chat message', (msg)=>{
+		$('#messages').append($('<li>').text(msg));
+	});
+
+</script>
+</html>
