@@ -76,3 +76,7 @@ body {
     width:200px;
     margin: auto;
 }
+
+.well {
+    display:none;
+}

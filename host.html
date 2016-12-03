@@ -12,6 +12,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/buttons.js"></script>
+    <script src="js/myjs.js"></script>
     
     
 </head>
@@ -44,14 +45,14 @@
         </div> <!-- / Row --> 
     </div> <!-- / Container --> 
    
-     <div class="container-fluid"> 
+     <div class="container-fluid" id="myform"> 
         <h2> HOST </h2>
          <p> Please set the options for your Secret Santa Group </p>
          <!-- INSERT OPTIONS --> 
 
     <!-- Budget Range -->  
     <p> Budget </p>
-    <form class="form-inline">
+    <form class="form-inline ">
         <div class="form-group">
             <label class="sr-only" for="exampleInputAmount">Budget</label>
         <div class="input-group formBudget">
@@ -62,31 +63,25 @@
       </div>
     </form>   
     <br>
-         
-    <!-- Set no. of participants -->  
-    <p> No. of Participants </p>
-    <div class="short center">
-      <select class="form-control short">
-        <option>1</option>
-        <option>2</option>
-        <option>3</option>
-        <option>4</option>
-        <option>5</option>
-      </select>
-    </div>
-    <br>
         
     <!-- Set Deadline -->  
-    <p> Gift Exchange Date </p>
+    <p> Sign Up Deadline </p>
     <div class="short ">
-      <input type="text" class="form-control" placeholder="Deadline">
+      <input type="date" class="form-control" placeholder="Deadline">
     </div>
     <br>
          
     </div> <!-- / Container -->
     
     <div class="container-fluid "> 
-     <a href="#" class="btn btn-danger btn-lg" role="button"> Generate Pin </a>
+     <a href="#" class="btn btn-danger btn-lg" role="button" id="generate"> Generate Pin </a>
+    </div>
+    
+    <div class="well well-lg" id="reply">
+    <h2>Your Group ID is:</h2>&nbsp;
+    <h3 id="id"></h3>&nbsp;
+    <h2>Current members:</h2>&nbsp;
+    <h3 id="members"></h3>
     </div>
         
 </body> 
