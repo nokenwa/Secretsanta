@@ -10,7 +10,7 @@ $(document).ready(function() {
         secretsantagroups.push(new Secretsantagroup());
         formread(secretsantagroups[index]);
          $("#id").text("Your secret santa pin is: " + secretsantagroups[index].secretsantapin);
-        $("#members").after("Some text after");
+        $("#members").after("There are no members in your groupe at the moment. Send people your secret santa pin to invite more people.");
     
         $("#myform").hide();
         $("#reply").show();

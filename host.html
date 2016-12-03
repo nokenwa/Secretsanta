@@ -51,8 +51,21 @@
          <p> Please set the options for your Secret Santa Group </p>
          <!-- INSERT OPTIONS --> 
 
+          <!-- Budget Range -->  
+    <p> Give your group a name: </p>
+    <form class="form-inline ">
+        <div class="form-group">
+            <label class="sr-only" for="exampleInputAmount">Groupname</label>
+        <div class="input-group formBudget">
+            <input type="text" class="form-control" id="exampleInputAmount" placeholder="Groupname">
+        </div>
+      </div>
+    </form>   
+    <br>
+         
+         
     <!-- Budget Range -->  
-    <p> Budget </p>
+    <p> Set a maximum gift spend: </p>
     <form class="form-inline ">
         <div class="form-group">
             <label class="sr-only" for="exampleInputAmount">Budget</label>
@@ -84,6 +97,8 @@
     <h2>Current members:</h2>&nbsp;
     <h3 id="members"></h3>
     </div>
-        
+        <br>
+            <a class="btn btn-default" href="active.html" role="button">View my Active Groups</a>
+    
 </body> 
 </html>
