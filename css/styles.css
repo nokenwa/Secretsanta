@@ -80,3 +80,7 @@ body {
 .well {
     display:none;
 }
+
+.imageResize{
+    width: 80%;
+}
